@@ -1,23 +1,21 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import {
     Card,
     CardContent,
     CardDescription,
-    CardFooter,
     CardHeader,
-    CardTitle,
-} from "./components/ui/card"
+} from '../components/ui/card'
 
 interface Trip {
-    origin: string;
-    destination: string;
-    date: string;
-    points: number;
+    origin: string
+    destination: string
+    date: string
+    points: number
 }
 
 const Profile: React.FC = () => {
-    const [trips, setTrips] = useState<Trip[]>([]);
+    const [trips, setTrips] = useState<Trip[]>([])
 
     React.useEffect(() => {
         const sampleTrips: Trip[] = [
@@ -33,21 +31,29 @@ const Profile: React.FC = () => {
                 date: '2024-06-06',
                 points: 100,
             },
-        ];
+        ]
 
-        setTrips(sampleTrips);
-    }, []);
+        setTrips(sampleTrips)
+    }, [])
 
     const sortTrips = (trips: Trip[]) => {
-        return trips.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-    };
+        return trips.sort(
+            (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+        )
+    }
 
     return (
         <>
             <h1>Here is your Profile Page</h1>
-            <Link to="/leaderboard"><h2>Leaderboard</h2></Link>
-            <Link to="/"><h2>Back to home screen</h2></Link>
-            <Link to="/rewards"><h2>Rewards</h2></Link>
+            <Link to="/leaderboard">
+                <h2>Leaderboard</h2>
+            </Link>
+            <Link to="/">
+                <h2>Back to home screen</h2>
+            </Link>
+            <Link to="/rewards">
+                <h2>Rewards</h2>
+            </Link>
 
             <br />
             {/* <ul>
@@ -90,7 +96,7 @@ const Profile: React.FC = () => {
                 </CardFooter>
             </Card> */}
         </>
-    );
-};
+    )
+}
 
 export default Profile
