@@ -20,6 +20,7 @@ interface Trip {
 
 const Profile: React.FC = () => {
     const [trips, setTrips] = useState<Trip[]>([]);
+    const [progress, setProgress] = React.useState(0);
 
     React.useEffect(() => {
         const sampleTrips: Trip[] = [
@@ -38,6 +39,9 @@ const Profile: React.FC = () => {
         ];
 
         setTrips(sampleTrips);
+
+        const timer = setTimeout(() => setProgress(66), 500);
+        return () => clearTimeout(timer);
     }, []);
 
     const sortTrips = (trips: Trip[]) => {
@@ -57,7 +61,7 @@ const Profile: React.FC = () => {
 
             <div style={{ paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px' }}>
                 <h3>Bus Points: Level 3</h3>
-                <Progress value={33} />
+                <Progress value={progress} />
             </div>
 
             <div style={{ paddingLeft: '20px', paddingRight: '20px' }}>
