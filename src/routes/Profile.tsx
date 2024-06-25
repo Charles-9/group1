@@ -44,19 +44,20 @@ const Profile: React.FC = () => {
 
     return (
         <>
-            <h1>Here is your Profile Page</h1>
-            <Link to="/leaderboard">
-                <h2>Leaderboard</h2>
-            </Link>
-            <Link to="/">
-                <h2>Back to home screen</h2>
-            </Link>
-            <Link to="/rewards">
-                <h2>Rewards</h2>
-            </Link>
+            <div className="bg-screenBackground w-mobile-width h-mobile-height mx-auto">
+                <h1>Here is your Profile Page</h1>
+                <Link to="/leaderboard">
+                    <h2>Leaderboard</h2>
+                </Link>
+                <Link to="/">
+                    <h2>Back to home screen</h2>
+                </Link>
+                <Link to="/rewards">
+                    <h2>Rewards</h2>
+                </Link>
 
-            <br />
-            {/* <ul>
+                <br />
+                {/* <ul>
                 {sortTrips(trips).map((trip) => (
                     <li key={trip.origin + trip.destination}>
                         <p>
@@ -67,23 +68,23 @@ const Profile: React.FC = () => {
                     </li>
                 ))}
             </ul> */}
-            <div>
-                {sortTrips(trips).map((trip) => (
-                    <Card key={trip.origin + trip.destination}>
-                        <CardHeader>
-                            <CardDescription>
-                                {trip.origin} ➡️ {trip.destination}
-                            </CardDescription>
-                        </CardHeader>
-                        <CardContent>
-                            <p>Date: {trip.date}</p>
-                            <p>points: {trip.points}</p>
-                        </CardContent>
-                    </Card>
-                ))}
-            </div>
+                <div>
+                    {sortTrips(trips).map((trip) => (
+                        <Card key={trip.origin + trip.destination}>
+                            <CardHeader>
+                                <CardDescription>
+                                    {trip.origin} ➡️ {trip.destination}
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent>
+                                <p>Date: {trip.date}</p>
+                                <p>points: {trip.points}</p>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </div>
 
-            {/* <Card>
+                {/* <Card>
                 <CardHeader>
                     <CardTitle>Card Title</CardTitle>
                     <CardDescription>Card Description</CardDescription>
@@ -95,6 +96,7 @@ const Profile: React.FC = () => {
                     <p>Card Footer</p>
                 </CardFooter>
             </Card> */}
+            </div>
         </>
     )
 }
