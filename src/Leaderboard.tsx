@@ -22,7 +22,7 @@ const Leaderboard: React.FC = () => {
             <Link to="/"><h2>Back to home screen</h2></Link>
             <LeaderBoardTable entries={sortedEntries} />
         </>
-    );
-};
+    )
+}
 
-export default Leaderboard;
+export default Leaderboard
