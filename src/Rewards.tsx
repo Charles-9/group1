@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Input } from "./components/ui/input"
 import { Button } from "./components/ui/button"
 import {
     Card,
@@ -62,8 +61,14 @@ const Rewards: React.FC = () => {
                 ))}
 
 
-                <Link to="/profile"><h2>Back to Profile</h2></Link>
-                <Link to="/"><h2>Back to home screen</h2></Link>
+                <br />
+                <br />
+                <br />
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <Link to="/profile"><Button>Profile</Button></Link>
+                    <Link to="/leaderboard"><Button>Leaderboard</Button></Link>
+                    <Link to="/rewards"><Button>Rewards</Button></Link>
+                </div>
             </div>
         </>
     );
