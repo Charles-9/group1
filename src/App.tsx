@@ -6,6 +6,7 @@ import Leaderboard from './Leaderboard';
 import ConnectToHop from './ConnectToHop';
 import SignUp from './SignUp';
 import Login from './Login';
+import Rewards from './Rewards';
 // import ConnectToHop from './ConnectToHop'; // Ensure ConnectToHop.tsx exports a React component
 // import Profile from './Profile'; // Ensure Profile.tsx exports a React component
 // import Leaderboard from './Leaderboard'; // Ensure Leaderboard.tsx exports a React component
@@ -22,6 +23,7 @@ const App: React.FC = () => {
         <Route path="/connecttohop" element={<ConnectToHop />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/rewards" element={<Rewards />} />
         {/* <Route path="/details" element={<ConnectToHop />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/leaderboard" element={<Leaderboard />} />

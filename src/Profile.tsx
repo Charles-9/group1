@@ -53,13 +53,13 @@ const Profile: React.FC = () => {
             <Link to="/leaderboard"><h2>Leaderboard</h2></Link>
             <Link to="/"><h2>Back to home screen</h2></Link>
             <Link to="/rewards"><h2>Rewards</h2></Link>
-            <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl" >
-                Welcome back,
-                Elly Maria
-            </h1>
-            <br />
-
             <div style={{ paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px' }}>
+                <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl" >
+                    Welcome back,
+                    Elly Maria
+                </h1>
+                <br />
+
                 <h3>Bus Points: Level 3</h3>
                 <Progress value={progress} />
             </div>
