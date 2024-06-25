@@ -1,12 +1,12 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import HomeScreen from './routes/HomeScreen'
-import Profile from './routes/Profile'
-import Leaderboard from './routes/Leaderboard'
-import ConnectToHop from './routes/ConnectToHop'
-import SignUp from './routes/SignUp'
-import Login from './routes/Login'
-import Rewards from './routes/Rewards'
+import HomeScreen from './HomeScreen'
+import Profile from './Profile'
+import Leaderboard from './Leaderboard'
+import ConnectToHop from './ConnectToHop'
+import SignUp from './SignUp'
+import Login from './Login'
+import Rewards from './Rewards'
 // import ConnectToHop from './ConnectToHop'; // Ensure ConnectToHop.tsx exports a React component
 // import Profile from './Profile'; // Ensure Profile.tsx exports a React component
 // import Leaderboard from './Leaderboard'; // Ensure Leaderboard.tsx exports a React component

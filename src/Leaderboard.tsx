@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from "../components/ui/button"
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Button } from './components/ui/button'
 
 const Leaderboard: React.FC = () => {
     return (
@@ -20,6 +20,6 @@ const Leaderboard: React.FC = () => {
             </div>
         </>
     )
-};
+}
 
-export default Leaderboard;
+export default Leaderboard

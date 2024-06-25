@@ -5,7 +5,7 @@ import {
     CardContent,
     CardDescription,
     CardHeader,
-} from '../components/ui/card'
+} from './components/ui/card'
 
 interface Trip {
     origin: string
