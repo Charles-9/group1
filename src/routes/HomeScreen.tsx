@@ -5,7 +5,7 @@ import { Button } from '../components/ui/button'
 const HomeScreen: React.FC = () => {
     return (
         <>
-            <div className="bg-screenBackground w-mobile-width h-mobile-height mx-auto">
+            <div className="screenDiv">
                 <Link to="/signup">
                     <Button>Sign up</Button>
                 </Link>

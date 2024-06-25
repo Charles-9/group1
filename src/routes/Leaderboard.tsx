@@ -5,7 +5,7 @@ import { Button } from "../components/ui/button"
 const Leaderboard: React.FC = () => {
     return (
         <>
-            <div className="bg-screenBackground w-mobile-width h-mobile-height mx-auto">
+            <div className="screenDiv">
                 <h1>Leaderboard</h1>
 
                 <ol>

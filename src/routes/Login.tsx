@@ -5,7 +5,7 @@ import { Input } from '../components/ui/input'
 const SignUp: React.FC = () => {
     return (
         <>
-            <div className="bg-screenBackground w-mobile-width h-mobile-height mx-auto">
+            <div className="screenDiv">
                 <h1>Login</h1>
 
                 <Input placeholder="email address" />

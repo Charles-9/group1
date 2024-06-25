@@ -44,7 +44,7 @@ const Profile: React.FC = () => {
 
     return (
         <>
-            <div className="bg-screenBackground w-mobile-width h-mobile-height mx-auto">
+            <div className="screenDiv">
                 <h1>Here is your Profile Page</h1>
                 <Link to="/leaderboard">
                     <h2>Leaderboard</h2>

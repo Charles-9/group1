@@ -16,6 +16,9 @@ module.exports = {
                 '2xl': '1400px',
             },
         },
+        fontFamily: {
+            primary: ['baloo-2', 'sans-serif'],
+        },
         extend: {
             colors: {
                 border: 'hsl(var(--border))',
@@ -60,12 +63,6 @@ module.exports = {
             animation: {
                 'accordion-down': 'accordion-down 0.2s ease-out',
                 'accordion-up': 'accordion-up 0.2s ease-out',
-            },
-            height: {
-                'mobile-height': '100vh',
-            },
-            width: {
-                'mobile-width': '380px',
             },
         },
     },

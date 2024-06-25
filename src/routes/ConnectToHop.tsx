@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Leaderboard: React.FC = () => {
     return (
         <>
-            <div className="bg-screenBackground w-mobile-width h-mobile-height mx-auto">
+            <div className="screenDiv">
                 <h1>Please connect to HOP</h1>
 
                 <input placeholder="AT Hop number"></input>
