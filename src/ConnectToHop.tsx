@@ -1,19 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Input } from "./components/ui/input"
+import { Button } from "./components/ui/button"
 
 const Leaderboard: React.FC = () => {
     return (
         <>
-            <h1>Please connect to HOP</h1>
-
-
-            <input placeholder='AT Hop number'></input><br />
-            <input placeholder='email address'></input>
             <br />
-            <Link to="/profile">
-                <button>Connect to hop</button>
-            </Link>
-            <Link to="/"><h2>Back to home screen</h2></Link>
+            <div style={{ paddingLeft: '20px', paddingRight: '20px' }}>
+                <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+                    Connect to AT Hop to track your trips
+                </h2>
+
+
+                <Input placeholder='AT Hop number'></Input><br />
+                <Input placeholder='email address'></Input>
+                <br />
+                <Link to="/profile" style={{ display: 'flex', justifyContent: 'center' }}>
+                    <Button>Connect to hop</Button>
+                </Link>
+            </div>
         </>
     );
 };
