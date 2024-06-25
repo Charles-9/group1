@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Input } from "./components/ui/input"
+
 
 const SignUp: React.FC = () => {
     return (
         <>
             <h1>Login</h1>
 
-
+            <Input placeholder='email address'/>
             <input placeholder='email address'></input>
             <br />
             <input placeholder='password'></input>
