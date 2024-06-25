@@ -15,7 +15,7 @@ const Leaderboard: React.FC = () => {
     const sortedEntries = [...entries].sort((a, b) => b.points - a.points);
 
     return (
-        <div>
+        <div className='screenDiv'>
             <h1>Leaderboard</h1>
             <Link to="/"><h2>Back to home screen</h2></Link>
             <LeaderBoardTable entries={sortedEntries} />
