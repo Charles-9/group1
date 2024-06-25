@@ -7,9 +7,14 @@ const HomeScreen: React.FC = () => {
         <>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <br />
+                <img src={"https://cdn.worldvectorlogo.com/logos/sia-new-circle-logo-transparent-1.svg"} alt = "Logo" style={{width: '200px'}} />
                 <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl" >
-                    Welcome
+                    RideQuest
                 </h1>
+                <br />
+                <h2 className="scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-5xl" >
+                    Welcome
+                </h2>
 
                 <br />
                 <Link to="/login">
