@@ -9,6 +9,7 @@ import {
     CardTitle,
 } from "./components/ui/card"
 import { Progress } from "./components/ui/progress"
+import { Button } from "./components/ui/button"
 
 
 interface Trip {
@@ -50,16 +51,14 @@ const Profile: React.FC = () => {
 
     return (
         <>
-            <Link to="/leaderboard"><h2>Leaderboard</h2></Link>
             <Link to="/"><h2>Back to home screen</h2></Link>
-            <Link to="/rewards"><h2>Rewards</h2></Link>
-            <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl" >
-                Welcome back,
-                Elly Maria
-            </h1>
-            <br />
-
             <div style={{ paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px' }}>
+                <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl" >
+                    Welcome back,
+                    Elly Maria
+                </h1>
+                <br />
+
                 <h3>Bus Points: Level 3</h3>
                 <Progress value={progress} />
             </div>
@@ -83,18 +82,11 @@ const Profile: React.FC = () => {
                 ))}
             </div>
 
-            {/* <Card>
-                <CardHeader>
-                    <CardTitle>Card Title</CardTitle>
-                    <CardDescription>Card Description</CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <p>Card Content</p>
-                </CardContent>
-                <CardFooter>
-                    <p>Card Footer</p>
-                </CardFooter>
-            </Card> */}
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <Link to="/profile"><Button>Profile</Button></Link>
+                <Link to="/leaderboard"><Button>Leaderboard</Button></Link>
+                <Link to="/rewards"><Button>Rewards</Button></Link>
+            </div>
         </>
     );
 };
