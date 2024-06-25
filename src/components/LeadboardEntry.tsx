@@ -12,6 +12,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar"
 interface LeadboardEntry {
     name: string;
     points: number;
+    avatarUrl: string;
 }
 
 interface LeadboardEntryTable {
@@ -27,7 +28,7 @@ const LeaderBoardTable: React.FC<LeadboardEntryTable> = ({ entries }) => {
                     <CardHeader>
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <Avatar>
-                                <AvatarImage src="https://github.com/shadcn.png" alt={entry.name} />
+                                <AvatarImage src={entry.avatarUrl} alt={entry.name} />
                                 <AvatarFallback>CN</AvatarFallback>
                             </Avatar>
                             <CardDescription>
