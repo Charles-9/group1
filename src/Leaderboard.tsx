@@ -12,12 +12,15 @@ const Leaderboard: React.FC = () => {
         { name: 'Paul Simon', points: 200 },
         { name: 'Alex Nicholson', points: 180 },
     ]);
+
+    const sortedEntries = [...entries].sort((a, b) => b.points - a.points);
+
     return (
         <>
             <h1>Leaderboard</h1>
             <Button>Click me</Button>
             <Link to="/"><h2>Back to home screen</h2></Link>
-            <LeaderBoardTable entries={entries} />
+            <LeaderBoardTable entries={sortedEntries} />
         </>
     );
 };
