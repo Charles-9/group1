@@ -9,7 +9,6 @@ import {
 import { Progress } from "./components/ui/progress"
 import NavigationBar from './components/navigationBar';
 
-
 interface Trip {
     origin: string;
     destination: string;
@@ -49,6 +48,7 @@ const Profile: React.FC = () => {
 
     return (
         <>
+        <div>
             <Link to="/leaderboard">
                 <h2>Leaderboard</h2>
             </Link>
@@ -60,16 +60,10 @@ const Profile: React.FC = () => {
             </Link>
             <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
                 Welcome back, Elly Maria
-            </h1>
-            <br />
+                </h1>
+                <br />
 
-            <div
-                style={{
-                    paddingLeft: '20px',
-                    paddingRight: '20px',
-                    paddingBottom: '20px',
-                }}
-            >
+         
                 <h3>Bus Points: Level 3</h3>
                 <Progress value={progress} />
             </div>
@@ -92,20 +86,8 @@ const Profile: React.FC = () => {
                     </Card>
                 ))}
             </div>
-            <NavigationBar />
 
-            {/* <Card>
-                <CardHeader>
-                    <CardTitle>Card Title</CardTitle>
-                    <CardDescription>Card Description</CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <p>Card Content</p>
-                </CardContent>
-                <CardFooter>
-                    <p>Card Footer</p>
-                </CardFooter>
-            </Card> */}
+            <NavigationBar />
         </>
     )
 };
