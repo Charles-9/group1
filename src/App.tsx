@@ -7,6 +7,7 @@ import ConnectToHop from './ConnectToHop'
 import SignUp from './SignUp'
 import Login from './Login'
 import Rewards from './Rewards'
+
 // import ConnectToHop from './ConnectToHop'; // Ensure ConnectToHop.tsx exports a React component
 // import Profile from './Profile'; // Ensure Profile.tsx exports a React component
 // import Leaderboard from './Leaderboard'; // Ensure Leaderboard.tsx exports a React component
@@ -16,6 +17,7 @@ import Rewards from './Rewards'
 const App: React.FC = () => {
     return (
         <Router>
+            
             <Routes>
                 <Route path="/" element={<HomeScreen />} />
                 <Route path="/profile" element={<Profile />} />

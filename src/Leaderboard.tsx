@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from './components/ui/button'
+import NavigationBar from './components/navigationBar'
 
 const Leaderboard: React.FC = () => {
     return (
@@ -18,6 +19,7 @@ const Leaderboard: React.FC = () => {
                     <h2>Back to home screen</h2>
                 </Link>
             </div>
+            <NavigationBar />
         </>
     )
 }
