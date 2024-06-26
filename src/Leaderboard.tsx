@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import LeaderBoardTable from "./components/LeadboardEntry";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/ui/tabs"
-import { MoveLeft } from 'lucide-react';
 
 import NavigationBar from './components/navigationBar'
 
@@ -42,7 +41,7 @@ const Leaderboard: React.FC = () => {
 
     return (
         <div className='screenDiv'>
-            <h1>Leaderboard</h1>
+            <h1 className='text-4xl font-extrabold center-text'>Leaderboard</h1>
             <Link to="/"><h2>Back to home screen</h2></Link>
             <LeaderBoardTable entries={sortedEntries} />
             <Tabs defaultValue="account" className="p-1" onValueChange={(value) => setActiveTab(value)}>
@@ -51,10 +50,7 @@ const Leaderboard: React.FC = () => {
                     <TabsTrigger className='hover:text-secondary' value="month">This month</TabsTrigger>
                     <TabsTrigger className='hover:text-secondary' value="week">This week</TabsTrigger>
                 </TabsList>
-                <TabsContent value="account">Make changes to your account here.</TabsContent>
-                <TabsContent value="password">Change your password here.</TabsContent>
             </Tabs>
-
         </div>
     )
 }
