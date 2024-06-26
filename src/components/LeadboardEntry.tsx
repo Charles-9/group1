@@ -23,7 +23,7 @@ interface LeadboardEntryTable {
 
 const LeaderBoardTable: React.FC<LeadboardEntryTable> = ({ entries }) => {
 
-    const getStarImage = (index: number) => {
+    const getStar = (index: number) => {
         if (index === 0) return goldStar;
         if (index === 1) return silverStar;
         if (index === 2) return bronzeStar;
@@ -37,14 +37,14 @@ const LeaderBoardTable: React.FC<LeadboardEntryTable> = ({ entries }) => {
                         <div style={{ display: 'flex', alignItems: 'center', flex: 1, position: 'relative' }}>
                         {index < 3 && (
                                 <img
-                                    src={getStarImage(index)}
-                                    alt={`${getStarImage(index)} star`}
+                                    src={getStar(index)}
+                                    alt={`${getStar(index)} star`}
                                     style={{
                                         position: 'absolute',
                                         top: '-15px',
                                         left: '-20px',
-                                        width: '40px', // Adjust the size as needed
-                                        height: '40px', // Adjust the size as needed
+                                        width: '40px',
+                                        height: '40px', 
                                         zIndex: 2
                                     }}
                                 />

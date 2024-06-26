@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import LeaderBoardTable from './components/LeadboardEntry';
 import { Tabs, TabsList, TabsTrigger } from './components/ui/tabs';
 
