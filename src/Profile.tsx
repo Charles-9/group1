@@ -7,7 +7,7 @@ import {
     CardHeader,
 } from "./components/ui/card"
 import { Progress } from "./components/ui/progress"
-import { Button } from "./components/ui/button"
+import NavigationBar from './components/navigationBar';
 import ProgressBar from './ProgressBar';
 
 interface Trip {
@@ -55,6 +55,7 @@ const Profile: React.FC = () => {
 
     return (
         <>
+           <div>
             <Link to="/"><h2>Back to home screen</h2></Link>
             <div className='p-2 pt-0'>
                 <div className='flex'>
@@ -97,13 +98,9 @@ const Profile: React.FC = () => {
                 </div>
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <Link to="/profile"><Button>Profile</Button></Link>
-                <Link to="/leaderboard"><Button>Leaderboard</Button></Link>
-                <Link to="/rewards"><Button>Rewards</Button></Link>
-            </div>
+            <NavigationBar />
         </>
-    );
+    )
 };
 
 export default Profile

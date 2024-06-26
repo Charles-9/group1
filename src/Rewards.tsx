@@ -3,12 +3,10 @@ import { Link } from 'react-router-dom';
 import { Button } from "./components/ui/button"
 import {
     Card,
-    CardContent,
     CardDescription,
-    CardFooter,
     CardHeader,
-    CardTitle,
 } from "./components/ui/card"
+import NavigationBar from './components/navigationBar'
 
 interface Reward {
     title: string;
@@ -70,6 +68,7 @@ const Rewards: React.FC = () => {
                     <Link to="/rewards"><Button>Rewards</Button></Link>
                 </div>
             </div>
+            <NavigationBar />
         </>
     );
 };
