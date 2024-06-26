@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import LeaderBoardTable from "./components/LeadboardEntry";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/ui/tabs"
+import LeaderBoardTable from './components/LeadboardEntry';
+import { Tabs, TabsList, TabsTrigger } from './components/ui/tabs';
 
-import NavigationBar from './components/navigationBar'
+import NavigationBar from './components/navigationBar';
+import { NavigationTab } from './components/NavigationTabs';
 
 const allTimeEntries = [
     { name: 'Tim Wong', points: 10, avatarUrl: './50.ong' },
@@ -40,9 +41,16 @@ const Leaderboard: React.FC = () => {
 
     return (
         <>
-            <h1 className='text-4xl font-extrabold center-text'>Leaderboard</h1>
-            <div className='greenscreen px-4 pb-20 rounded-tl-[30px] rounded-tr-[30px] mt-0 custom-gradient'>
-                <div className='pt-10'>
+        <div>
+            <div className="h-headerDiv">
+                <h1 className="text-4xl font-extrabold center-text">
+                    Leaderboard
+                </h1>
+                <Link to="/">
+                    <h2>Back to home screen</h2>
+                </Link>
+            </div>
+            <div className="greenscreen h-greenDiv px-4 pb-20 rounded-tl-[30px] rounded-tr-[30px] mt-0 custom-gradient">
                 <LeaderBoardTable entries={sortedEntries} />
                 </div>
 
@@ -72,7 +80,7 @@ const Leaderboard: React.FC = () => {
                     </TabsList>
                 </Tabs>
             </div>
-            <NavigationBar />
+            <NavigationBar navigationTab={NavigationTab.LeaderBoard} />
         </>
     )
 }
