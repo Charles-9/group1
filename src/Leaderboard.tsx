@@ -38,17 +38,38 @@ const Leaderboard: React.FC = () => {
     };
     const sortedEntries = [...getEntries()].sort((a, b) => b.points - a.points);
     
+    const sortedEntries = [...entries].sort((a, b) => b.points - a.points);
+    const [selectedTab, setSelectedTab] = useState('all-time');
 
     return (
         <div className='screenDiv'>
             <h1 className='text-4xl font-extrabold center-text'>Leaderboard</h1>
             <Link to="/"><h2>Back to home screen</h2></Link>
             <LeaderBoardTable entries={sortedEntries} />
-            <Tabs defaultValue="account" className="p-1" onValueChange={(value) => setActiveTab(value)}>
-                <TabsList className='flex justify-around '>
-                    <TabsTrigger className='hover:text-secondary' value="all-time">All time</TabsTrigger>
-                    <TabsTrigger className='hover:text-secondary' value="month">This month</TabsTrigger>
-                    <TabsTrigger className='hover:text-secondary' value="week">This week</TabsTrigger>
+
+            <Tabs defaultValue="account" className="p-1 bg-gray-100" >
+            <TabsList className='flex justify-around'>
+                    <TabsTrigger
+                        value="all-time"
+                        className={`data-[state=active]:text-secondary data-[state=active]:bg-white text-gray-500 hover:text-primary ${selectedTab === 'all-time' ? 'text-secondary' : ''}`}
+                        onClick={() => setSelectedTab('all-time')}
+                    >
+                        All time
+                    </TabsTrigger>
+                    <TabsTrigger
+                        value="month"
+                        className={`data-[state=active]:text-secondary data-[state=active]:bg-white text-gray-500 hover:text-primary ${selectedTab === 'month' ? 'text-secondary' : ''}`}
+                        onClick={() => setSelectedTab('month')}
+                    >
+                        This Month
+                    </TabsTrigger>
+                    <TabsTrigger
+                        value="week"
+                        className={`data-[state=active]:text-secondary data-[state=active]:bg-white text-gray-500 hover:text-primary ${selectedTab === 'week' ? 'text-secondary' : ''}`}
+                        onClick={() => setSelectedTab('week')}
+                    >
+                        This Week
+                    </TabsTrigger>
                 </TabsList>
             </Tabs>
         </div>
