@@ -14,6 +14,7 @@ interface Trip {
     destination: string
     date: string
     points: number
+    streak?: string
 }
 
 const Profile: React.FC = () => {
@@ -26,17 +27,25 @@ const Profile: React.FC = () => {
                 destination: 'Botany Town Center',
                 date: '2024-06-06',
                 points: 100,
+                streak: '+2 streak + 100 points'
             },
             {
-                origin: 'Onehunga',
-                destination: 'Howick',
+                origin: 'Howick',
+                destination: 'Panmure Street',
                 date: '2024-06-05',
+                points: 100,
+                streak: '+1 streak + 50 points'
+            },
+            {
+                origin: 'Auckland CBD',
+                destination: 'Botany Town Center',
+                date: '2024-06-04',
                 points: 100,
             },
             {
-                origin: 'Blockhouse Bay',
-                destination: 'Penrose',
-                date: '2024-06-04',
+                origin: 'Auckland CBD',
+                destination: 'Botany Town Center',
+                date: '2024-06-02',
                 points: 100,
             },
         ]
@@ -85,14 +94,27 @@ const Profile: React.FC = () => {
                     <div className="flex space-y-2 flex-col">
                         {sortTrips(trips).map((trip) => (
                             <Card key={trip.origin + trip.destination}>
-                                <CardHeader className="p-5 pb-1">
-                                    <CardDescription>
-                                        {trip.origin} → {trip.destination}
+                                <CardHeader className="p-4 pb-1">
+                                    <CardDescription className='flex'>
+                                        <span className='w-2/3'>
+                                            {trip.origin}
+                                        </span>
+                                        <span className='w-1/9 mr-4'>
+                                            →
+                                        </span>
+                                        <span className='w-full'>
+                                            {trip.destination}
+                                        </span>
                                     </CardDescription>
                                 </CardHeader>
-                                <CardContent className="flex p-4 space-x-10 justify-between">
-                                    <p>Date: {trip.date}</p>
-                                    <p>points: {trip.points}</p>
+                                <CardContent className="flex p-4 space-x-10 text-sm justify-between">
+                                    <p>{trip.date}</p>
+                                    <div className='text-secondary flex flex-col text-right'>
+                                        <p>+ {trip.points} points</p>
+                                        <div className='text-accent text-nowrap'>
+                                            {trip.streak}
+                                        </div>
+                                    </div>
                                 </CardContent>      
                             </Card>
                         ))}
