@@ -29,6 +29,7 @@ const PopupDialog = () => {
                         next bus trip?
                     </AlertDialogDescription>
                 </AlertDialogHeader>
+
                 <AlertDialogFooter className='flex flex-col-reverse  justify-left align-center'>
                     <AlertDialogCancel className="bg-transparent underline text-gray-600">
                         Maybe later
