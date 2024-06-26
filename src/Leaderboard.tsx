@@ -37,42 +37,45 @@ const Leaderboard: React.FC = () => {
         return allTimeEntries;
     };
     const sortedEntries = [...getEntries()].sort((a, b) => b.points - a.points);
-    
+
     // const sortedEntries = [...entries].sort((a, b) => b.points - a.points);
     const [selectedTab, setSelectedTab] = useState('all-time');
 
     return (
-        <div className='screenDiv'>
+        <>
             <h1 className='text-4xl font-extrabold center-text'>Leaderboard</h1>
             <Link to="/"><h2>Back to home screen</h2></Link>
-            <LeaderBoardTable entries={sortedEntries} />
+            <div className='greenscreen px-4 pb-20 rounded-tl-[30px] rounded-tr-[30px] mt-0 custom-gradient'>
+                <LeaderBoardTable entries={sortedEntries} />
 
-            <Tabs defaultValue="account" className="p-1 bg-gray-100" >
-            <TabsList className='flex justify-around'>
-                    <TabsTrigger
-                        value="all-time"
-                        className={`data-[state=active]:text-secondary data-[state=active]:bg-white text-gray-500 hover:text-primary ${selectedTab === 'all-time' ? 'text-secondary' : ''}`}
-                        onClick={() => setActiveTab('all-time')}
-                    >
-                        All time
-                    </TabsTrigger>
-                    <TabsTrigger
-                        value="month"
-                        className={`data-[state=active]:text-secondary data-[state=active]:bg-white text-gray-500 hover:text-primary ${selectedTab === 'month' ? 'text-secondary' : ''}`}
-                        onClick={() => setActiveTab('month')}
-                    >
-                        This Month
-                    </TabsTrigger>
-                    <TabsTrigger
-                        value="week"
-                        className={`data-[state=active]:text-secondary data-[state=active]:bg-white text-gray-500 hover:text-primary ${selectedTab === 'week' ? 'text-secondary' : ''}`}
-                        onClick={() => setActiveTab('week')}
-                    >
-                        This Week
-                    </TabsTrigger>
-                </TabsList>
-            </Tabs>
-        </div>
+                <Tabs defaultValue="account" className="bg-gray-100 w-11/12" >
+                    <TabsList className='flex justify-around'>
+                        <TabsTrigger
+                            value="all-time"
+                            className={`data-[state=active]:text-secondary data-[state=active]:bg-white text-gray-500 hover:text-primary ${selectedTab === 'all-time' ? 'text-secondary' : ''}`}
+                            onClick={() => setActiveTab('all-time')}
+                        >
+                            All time
+                        </TabsTrigger>
+                        <TabsTrigger
+                            value="month"
+                            className={`data-[state=active]:text-secondary data-[state=active]:bg-white text-gray-500 hover:text-primary ${selectedTab === 'month' ? 'text-secondary' : ''}`}
+                            onClick={() => setActiveTab('month')}
+                        >
+                            This Month
+                        </TabsTrigger>
+                        <TabsTrigger
+                            value="week"
+                            className={`data-[state=active]:text-secondary data-[state=active]:bg-white text-gray-500 hover:text-primary ${selectedTab === 'week' ? 'text-secondary' : ''}`}
+                            onClick={() => setActiveTab('week')}
+                        >
+                            This Week
+                        </TabsTrigger>
+                    </TabsList>
+                </Tabs>
+            </div>
+            <NavigationBar />
+        </>
     )
 }
 
