@@ -81,6 +81,10 @@
     background: linear-gradient(180deg, rgba(136, 203, 64, 0.36) 0%, rgba(57, 156, 219, 0.36) 100%);
 }
 
+.greenscreen {
+    background: #d4ecba;
+}
+
 @layer components {
     .screenDiv {
         height: 100vh;
