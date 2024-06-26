@@ -24,7 +24,7 @@ const HomeScreen: React.FC = () => {
 
                     <br />
                     <Link to="/login">
-                        <Button style={{ width: '110px' }}>Login</Button>
+                        <Button style={{ width: '110px', backgroundColor: 'rgba(255, 255, 255, 0)', borderStyle: 'solid', borderColor: 'rgb(0, 0, 0)', borderWidth: '2px', color: "rgb(0, 0, 0)"}}><strong>Login</strong></Button>
                     </Link>
 
                     <br />

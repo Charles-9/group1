@@ -7,6 +7,7 @@ const SignUp: React.FC = () => {
     return (
         <>
             <div className='h-screen flex flex-col'>
+
                 <br />
                 <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl" style={{ paddingTop: '30px', paddingBottom: '15px', paddingLeft: '40px' }}>
                     Sign up
@@ -26,6 +27,10 @@ const SignUp: React.FC = () => {
                         <Button>Sign Up</Button>
                     </Link>
                 </div>
+            </div>
+            <Link to="/connecttohop" style={{ display: 'flex', justifyContent: 'center' }}>
+                <Button>Sign Up</Button>
+            </Link>
             </div>
         </>
     );
