@@ -60,14 +60,14 @@ const Leaderboard: React.FC = () => {
                 <LeaderBoardTable entries={sortedEntries} />
                 
 
-                <Tabs defaultValue={activeTab} className="bg-gray-100 mt-4" onValueChange={setActiveTab} >
+                <Tabs defaultValue={activeTab} className="bg-gray-100 mt-4 rounded-md" onValueChange={setActiveTab} >
                     <TabsList className='flex justify-around'>
                         <TabsTrigger
                             value="all-time"
                             className={`data-[state=active]:text-secondary data-[state=active]:bg-white text-gray-500 hover:text-primary`}
                             onClick={() => setActiveTab('all-time')}
                         >
-                            All time
+                            All Time
                         </TabsTrigger>
                         <TabsTrigger
                             value="month"
