@@ -24,20 +24,20 @@ const LeaderBoardTable: React.FC<LeadboardEntryTable> = ({ entries }) => {
     return (
         <div>
             {entries.map((entry) => (
-                <Card key={entry.name} style={{ marginBottom: '10px', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '90%'}}>
+                <Card key={entry.name} style={{ marginBottom: '10px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <CardHeader>
-                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', flex: 1 }}>
                             <Avatar>
                                 <AvatarImage src={entry.avatarUrl} alt={entry.name} />
                                 <AvatarFallback>CN</AvatarFallback>
                             </Avatar>
-                            <CardDescription>
+                            <CardDescription style={{ marginLeft: '10px' }}>
                                 {entry.name}
                             </CardDescription>
                         </div>
                     </CardHeader>
                     <CardContent>
-                        <p>Points: {entry.points}</p>
+                        <p>{entry.points} points</p>
                     </CardContent>
                 </Card>
             ))}
