@@ -21,7 +21,7 @@ const Leaderboard: React.FC = () => {
                             <span className='text-[50px]'>
                                 ←
                             </span>
-                            <span>back to home screen</span>
+                            <span className='mt-[25px]'>back to home screen</span>
                         </Link>
 
                     </div>
