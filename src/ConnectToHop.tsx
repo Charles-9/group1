@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Input } from "./components/ui/input"
 import { Button } from "./components/ui/button"
+import { useNavigate } from 'react-router-dom';
 
 const Leaderboard: React.FC = () => {
     const [isConnected, setIsConnected] = useState(false);
@@ -9,6 +10,23 @@ const Leaderboard: React.FC = () => {
     const handleConnect = () => {
         setIsConnected(true);
     }
+
+    const navigate = useNavigate();
+    const [delay, setDelay] = useState<boolean>(false);
+
+    useEffect(() => {
+        if (delay) {
+            handleConnect();
+            const timer = setTimeout(() => {
+                navigate('/profile');
+            }, 1500); // Choose length of delay here        
+            return () => clearTimeout(timer);
+        }
+    }, [delay, navigate]);
+
+    const handleClick = () => {
+        setDelay(true);
+    };
 
     return (
         <>
@@ -49,7 +67,7 @@ const Leaderboard: React.FC = () => {
                         {/* <Link to="/" style={{ display: 'flex', justifyContent: 'center', paddingTop: '20px' }}>
                             <Button>Connect to hop</Button>
                         </Link> */}
-                        <Button onClick={handleConnect}>
+                        <Button onClick={handleClick}>
                             {isConnected ? 'Connected to Hop' : 'Connect to Hop'}
                         </Button>
                     </div>
