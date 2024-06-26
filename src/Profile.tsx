@@ -54,8 +54,7 @@ const Profile: React.FC = () => {
     };
 
     return (
-
-        <div>
+        <>
             <Link to="/"><h2>Back to home screen</h2></Link>
             <div className='p-2 pt-0'>
                 <div className='flex'>
@@ -99,7 +98,7 @@ const Profile: React.FC = () => {
             </div>
 
             <NavigationBar />
-        </div>
+        </>
     )
 };
 
