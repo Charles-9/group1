@@ -38,7 +38,7 @@ const Leaderboard: React.FC = () => {
     };
     const sortedEntries = [...getEntries()].sort((a, b) => b.points - a.points);
     
-    const sortedEntries = [...entries].sort((a, b) => b.points - a.points);
+    // const sortedEntries = [...entries].sort((a, b) => b.points - a.points);
     const [selectedTab, setSelectedTab] = useState('all-time');
 
     return (
@@ -52,21 +52,21 @@ const Leaderboard: React.FC = () => {
                     <TabsTrigger
                         value="all-time"
                         className={`data-[state=active]:text-secondary data-[state=active]:bg-white text-gray-500 hover:text-primary ${selectedTab === 'all-time' ? 'text-secondary' : ''}`}
-                        onClick={() => setSelectedTab('all-time')}
+                        onClick={() => setActiveTab('all-time')}
                     >
                         All time
                     </TabsTrigger>
                     <TabsTrigger
                         value="month"
                         className={`data-[state=active]:text-secondary data-[state=active]:bg-white text-gray-500 hover:text-primary ${selectedTab === 'month' ? 'text-secondary' : ''}`}
-                        onClick={() => setSelectedTab('month')}
+                        onClick={() => setActiveTab('month')}
                     >
                         This Month
                     </TabsTrigger>
                     <TabsTrigger
                         value="week"
                         className={`data-[state=active]:text-secondary data-[state=active]:bg-white text-gray-500 hover:text-primary ${selectedTab === 'week' ? 'text-secondary' : ''}`}
-                        onClick={() => setSelectedTab('week')}
+                        onClick={() => setActiveTab('week')}
                     >
                         This Week
                     </TabsTrigger>
