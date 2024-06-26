@@ -4,6 +4,7 @@ import LeaderBoardTable from "./components/LeadboardEntry";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/ui/tabs"
 import { MoveLeft } from 'lucide-react';
 
+import NavigationBar from './components/navigationBar'
 
 
 const Leaderboard: React.FC = () => {

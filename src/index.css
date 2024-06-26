@@ -7,9 +7,6 @@
         --background: 0 0% 100%;
         --foreground: 222.2 84% 4.9%;
 
-        --card: 0 0% 100%;
-        --card-foreground: 222.2 84% 4.9%;
-
         --popover: 0 0% 100%;
         --popover-foreground: 222.2 84% 4.9%;
 
@@ -80,14 +77,17 @@
     text-align: center;
 }
 
+.custom-gradient {
+    background: linear-gradient(180deg, rgba(136, 203, 64, 0.36) 0%, rgba(57, 156, 219, 0.36) 100%);
+}
+
 @layer components {
     .screenDiv {
-        padding: 1rem;
         height: 100vh;
         width: 380px;
         font-weight: 600;
         font-family: 'baloo 2';
-        background: #d4ecba;
+        background: #ffffff;
         margin: 0 auto;
     }
 }
