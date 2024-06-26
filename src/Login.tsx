@@ -48,7 +48,7 @@ const Login: React.FC = () => {
                     <div style={{ paddingLeft: '20px', paddingRight: '20px' }}>
                         <Input className='mt-8' placeholder='email address' />
                         <br />
-                        <Input placeholder='password'></Input>
+                        <Input type='password' placeholder='password'></Input>
                         <br />
                     </div>
                     <style>

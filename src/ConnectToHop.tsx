@@ -61,12 +61,12 @@ const Leaderboard: React.FC = () => {
                     <div style={{ paddingLeft: '20px', paddingRight: '20px', paddingTop: '100px' }}>
                         <Input placeholder='AT Hop number'></Input><br />
                         <Input placeholder='Email address'></Input><br />
-                        <Input placeholder='Password'></Input>
+                        <Input type='password' placeholder='Password'></Input>
                         <br />
                         {/* <Link to="/" style={{ display: 'flex', justifyContent: 'center', paddingTop: '20px' }}>
                             <Button>Connect to hop</Button>
                         </Link> */}
-                        <Button onClick={handleClick}>
+                        <Button className='w-full' onClick={handleClick}>
                             {isConnected ? 'Connected to Hop' : 'Connect to Hop'}
                         </Button>
                     </div>

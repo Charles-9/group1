@@ -18,9 +18,9 @@ const SignUp: React.FC = () => {
                     <div style={{ paddingLeft: '20px', paddingRight: '20px', paddingTop: '100px' }}>
                         <Input placeholder='email address'></Input>
                         <br />
-                        <Input placeholder='password'></Input>
+                        <Input type='password' placeholder='password'></Input>
                         <br />
-                        <Input placeholder='confirm password'></Input>
+                        <Input type='password' placeholder='confirm password'></Input>
                         <br />
                     </div>
                     <Link to="/connecttohop" style={{ display: 'flex', justifyContent: 'center' }}>
