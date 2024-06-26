@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Input } from "./components/ui/input"
 import { Button } from "./components/ui/button"
+import { useNavigate } from 'react-router-dom';
 
 const Login: React.FC = () => {
+    const navigate = useNavigate();
+    const [delay, setDelay] = useState<boolean>(false);
+
+    useEffect(() => {
+        if (delay) {
+            const timer = setTimeout(() => {
+                navigate('/profile');
+            }, 1000); // Choose length of delay here
+            return () => clearTimeout(timer);
+        }
+    }, [delay, navigate]);
+
+    const handleClick = () => {
+        setDelay(true);
+    };
     return (
         <>
             <div className='h-screen flex flex-col'>
@@ -18,9 +34,7 @@ const Login: React.FC = () => {
                         <Input placeholder='password'></Input>
                         <br />
                     </div>
-                    <Link to="/profile" style={{ display: 'flex', justifyContent: 'center' }}>
-                        <Button>Log in</Button>
-                    </Link>
+                    <Button onClick={handleClick} style={{ display: 'flex', justifyContent: 'center' }}>Log in</Button>
                     <Link to="/"><h2>Back to home screen</h2></Link>
                 </div>
             </div>
