@@ -16,10 +16,9 @@ const Leaderboard: React.FC = () => {
 
     useEffect(() => {
         if (delay) {
-            handleConnect();
             const timer = setTimeout(() => {
-                navigate('/profile');
-            }, 1500); // Choose length of delay here        
+                handleConnect();
+            }, 1000); // Choose length of delay here        
             return () => clearTimeout(timer);
         }
     }, [delay, navigate]);
