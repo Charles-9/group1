@@ -80,6 +80,10 @@
     text-align: center;
 }
 
+.custom-gradient {
+    background: linear-gradient(180deg, rgba(136, 203, 64, 0.36) 0%, rgba(57, 156, 219, 0.36) 100%);
+}
+
 @layer components {
     .screenDiv {
         padding: 1rem;
