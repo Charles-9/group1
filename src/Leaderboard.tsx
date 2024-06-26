@@ -7,24 +7,24 @@ import NavigationBar from './components/navigationBar';
 import { NavigationTab } from './components/NavigationTabs';
 
 const allTimeEntries = [
-    { name: 'Tim Wong', points: 10, avatarUrl: './50.ong' },
-    { name: 'Renee Singh', points: 100, avatarUrl: 'https://avatar.iran.liara.run/public/93' },
-    { name: 'Paul Simon', points: 200, avatarUrl: 'https://avatar.iran.liara.run/public/50' },
-    { name: 'Alexa Nicholson', points: 180, avatarUrl: 'https://avatar.iran.liara.run/public/58' },
+    { name: 'Tim Wong', points: 500, avatarUrl: 'public/Assets/50.png' },
+    { name: 'Renee Singh', points: 625, avatarUrl: 'public/Assets/93.png' },
+    { name: 'Paul Simon', points: 480, avatarUrl: 'public/Assets/50.png' },
+    { name: 'Alexa Nicholson', points: 765, avatarUrl: 'public/Assets/58.png' },
 ];
 
 const monthlyEntries = [
-    { name: 'Sean Mounga', points: 50, avatarUrl: 'https://avatar.iran.liara.run/public/11' },
-    { name: 'Ginny West', points: 150, avatarUrl: 'https://avatar.iran.liara.run/public/61' },
-    { name: 'Sara Olsen', points: 250, avatarUrl: 'https://avatar.iran.liara.run/public/91' },
-    { name: 'Alexa Nicholson', points: 180, avatarUrl: 'https://avatar.iran.liara.run/public/58' }
+    { name: 'Sean Mounga', points: 50, avatarUrl: 'public/Assets/11.png' },
+    { name: 'Ginny West', points: 150, avatarUrl: 'public/Assets/61.png' },
+    { name: 'Sara Olsen', points: 250, avatarUrl: 'public/Assets/91.png' },
+    { name: 'Alexa Nicholson', points: 180, avatarUrl: 'public/Assets/58.png' }
 ];
 
 const weeklyEntries = [
-    { name: 'Sam Wilson', points: 20, avatarUrl: 'https://avatar.iran.liara.run/public/80' },
-    { name: 'Sara Dixon', points: 120, avatarUrl: 'https://avatar.iran.liara.run/public/81' },
-    { name: 'Amy Kwon', points: 220, avatarUrl: 'https://avatar.iran.liara.run/public/66' },
-    { name: 'Alex Nicholson', points: 180, avatarUrl: 'https://avatar.iran.liara.run/public/58' }
+    { name: 'Sam Wilson', points: 20, avatarUrl: 'public/Assets/80.png' },
+    { name: 'Sara Dixon', points: 120, avatarUrl: 'public/Assets/81.png' },
+    { name: 'Amy Kwon', points: 220, avatarUrl: 'public/Assets/66.png' },
+    { name: 'Alex Nicholson', points: 180, avatarUrl: 'public/Assets/58.png' }
 ];
 
 
@@ -42,19 +42,25 @@ const Leaderboard: React.FC = () => {
     return (
         <>
         <div>
-            <div className="h-headerDiv">
-                <h1 className="text-4xl font-extrabold center-text">
-                    Leaderboard
-                </h1>
-                <Link to="/">
-                    <h2>Back to home screen</h2>
-                </Link>
-            </div>
-            <div className="greenscreen h-greenDiv px-4 pb-20 rounded-tl-[30px] rounded-tr-[30px] mt-0 custom-gradient">
-                <LeaderBoardTable entries={sortedEntries} />
-                </div>
+        <div className="px-4">
+                <div className="flex h-headerDiv justify-center items-center mt-4 flex-col">
+                    <img src='/public/Assets/award_star_24dp_FILL0_wght400_GRAD0_opsz24 1.png'></img>
 
-                <Tabs defaultValue={activeTab} className="bg-gray-100" onValueChange={setActiveTab} >
+                    <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mt-2">
+                        Leaderboard
+                    </h1>
+                    <div className="px-4 text-center">
+                        <small className="text-s font-small leading-none text-center">
+                            See how you stack up against other users
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div className="greenscreen h-greenDiv px-4 pt-10 pb-20 rounded-tl-[30px] rounded-tr-[30px] mt-0 custom-gradient">
+                <LeaderBoardTable entries={sortedEntries} />
+                
+
+                <Tabs defaultValue={activeTab} className="bg-gray-100 mt-4" onValueChange={setActiveTab} >
                     <TabsList className='flex justify-around'>
                         <TabsTrigger
                             value="all-time"
@@ -79,6 +85,7 @@ const Leaderboard: React.FC = () => {
                         </TabsTrigger>
                     </TabsList>
                 </Tabs>
+                </div>
             </div>
             <NavigationBar navigationTab={NavigationTab.LeaderBoard} />
         </>
