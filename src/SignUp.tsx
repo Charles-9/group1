@@ -31,7 +31,6 @@ const SignUp: React.FC = () => {
             <Link to="/connecttohop" style={{ display: 'flex', justifyContent: 'center' }}>
                 <Button>Sign Up</Button>
             </Link>
-            </div>
         </>
     );
 };
