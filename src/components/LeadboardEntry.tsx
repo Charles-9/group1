@@ -24,7 +24,7 @@ const LeaderBoardTable: React.FC<LeadboardEntryTable> = ({ entries }) => {
     return (
         <div>
             {entries.map((entry) => (
-                <Card key={entry.name} style={{ marginBottom: '10px' }}>
+                <Card key={entry.name} style={{ marginBottom: '10px', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
                     <CardHeader>
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <Avatar>
@@ -36,7 +36,7 @@ const LeaderBoardTable: React.FC<LeadboardEntryTable> = ({ entries }) => {
                             </CardDescription>
                         </div>
                     </CardHeader>
-                    <CardContent style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'right' }}>
+                    <CardContent>
                         <p>Points: {entry.points}</p>
                     </CardContent>
                 </Card>
