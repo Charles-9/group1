@@ -29,12 +29,12 @@ const PopupDialog = () => {
                         next bus trip?
                     </AlertDialogDescription>
                 </AlertDialogHeader>
-                <AlertDialogFooter>
+                <AlertDialogFooter className='flex flex-col-reverse  justify-left align-center'>
                     <AlertDialogCancel className="bg-transparent underline text-gray-600">
                         Maybe later
                     </AlertDialogCancel>
                     <AlertDialogAction
-                        className="bg-primary text-white w-24"
+                        className="bg-primary text-white w-24 mx-auto"
                         onClick={() => setIsRedeemed(true)}
                     >
                         Yes!

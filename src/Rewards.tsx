@@ -6,6 +6,7 @@ import {
     CardHeader,
 } from "./components/ui/card"
 import NavigationBar from './components/navigationBar'
+import PopupDialog from './components/popupDialog';
 
 interface Reward {
     title: string;
@@ -53,7 +54,8 @@ const Rewards: React.FC = () => {
                         <Card key={index}>
                             <CardHeader className='flex p-4 pb-0 font-bold space-x-10 justify-between flex-row center-vertical'>
                                 {reward.title}
-                                <Button className='w-50 bg-accent rounded-[50px]'>Redeem</Button>
+                                {/* <Button className='w-50 bg-accent rounded-[50px]'>Redeem</Button> */}
+                                <PopupDialog />
                             </CardHeader>
                             <CardDescription className='text-sm pl-5 pb-5 text-gray-500'>
                                 Earned on {new Date(reward.date).toLocaleDateString()}
