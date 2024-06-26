@@ -66,7 +66,7 @@ const Leaderboard: React.FC = () => {
                         {/* <Link to="/" style={{ display: 'flex', justifyContent: 'center', paddingTop: '20px' }}>
                             <Button>Connect to hop</Button>
                         </Link> */}
-                        <Button onClick={handleClick}>
+                        <Button className='w-full' onClick={handleClick}>
                             {isConnected ? 'Connected to Hop' : 'Connect to Hop'}
                         </Button>
                     </div>
