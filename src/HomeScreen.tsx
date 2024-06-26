@@ -5,10 +5,10 @@ import { Button } from "./components/ui/button"
 const HomeScreen: React.FC = () => {
     return (
         <>
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '10px' }}>
                 <br />
                 <svg width="146" height="142" viewBox="0 0 146 142" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-                    <rect width="146" height="142" fill="url(#pattern0_99_376)" />
+                    <rect width="146" height="142" fill="url(#pattern0_99_376)"/>
                     <defs>
                         <pattern id="pattern0_99_376" patternContentUnits="objectBoundingBox" width="1" height="1">
                             <use xlinkHref="#image0_99_376" transform="matrix(0.00398413 0 0 0.0040813 -0.464286 -0.410569)" />
@@ -17,17 +17,14 @@ const HomeScreen: React.FC = () => {
                     </defs>
                 </svg>
 
-                <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl" >
+                <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl" style={{paddingBottom: '30px'}}>
                     RideQuest
                 </h1>
 
             </div>
 
             {/* <div className='screenDiv' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}> */}
-            <div className='screenDiv flex flex-col items-center rounded-tl-[30px] rounded-tr-[30px] mt-2 custom-gradient' >
-                <h1 className="scroll-m-20 text-2xl font-extrabold tracking-tight lg:text-5xl" >
-                    Welcome
-                </h1>
+            <div className='screenDiv flex flex-col items-center rounded-tl-[30px] rounded-tr-[30px] mt-2 custom-gradient'>
                 <br />
                 <h2 className="scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-5xl" >
                     Welcome
@@ -35,7 +32,7 @@ const HomeScreen: React.FC = () => {
 
                 <br />
                 <Link to="/login">
-                    <Button style={{ width: '110px' }}>Login</Button>
+                    <Button style={{ width: '110px', backgroundColor: 'rgba(255, 255, 255, 0)', borderStyle: 'solid', borderColor: 'rgb(0, 0, 0)', borderWidth: '2px', color: "rgb(0, 0, 0)"}}><strong>Login</strong></Button>
                 </Link>
 
                 <br />
