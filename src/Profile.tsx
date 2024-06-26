@@ -4,9 +4,7 @@ import {
     Card,
     CardContent,
     CardDescription,
-    CardFooter,
     CardHeader,
-    CardTitle,
 } from "./components/ui/card"
 import { Progress } from "./components/ui/progress"
 import { Button } from "./components/ui/button"
@@ -34,7 +32,13 @@ const Profile: React.FC = () => {
             {
                 origin: 'Onehunga',
                 destination: 'Howick',
-                date: '2024-06-06',
+                date: '2024-06-05',
+                points: 100,
+            },
+            {
+                origin: 'Blockhouse Bay',
+                destination: 'Penrose',
+                date: '2024-06-04',
                 points: 100,
             },
         ];
@@ -52,8 +56,8 @@ const Profile: React.FC = () => {
     return (
         <>
             <Link to="/"><h2>Back to home screen</h2></Link>
-            <div style={{ paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px' }}>
-                <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl" >
+            <div className='p-2 pt-0'>
+                <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight" >
                     Welcome back,
                     Elly Maria
                 </h1>
@@ -63,23 +67,25 @@ const Profile: React.FC = () => {
                 <Progress value={progress} />
             </div>
 
-            <div style={{ paddingLeft: '20px', paddingRight: '20px' }}>
+            <div className="px-2">
                 <h3 className="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">
                     Recent Trips
                 </h3>
-                {sortTrips(trips).map((trip) => (
-                    <Card key={trip.origin + trip.destination}>
-                        <CardHeader>
-                            <CardDescription>
-                                {trip.origin} ➡️ {trip.destination}
-                            </CardDescription>
-                        </CardHeader>
-                        <CardContent>
-                            <p>Date: {trip.date}</p>
-                            <p>points: {trip.points}</p>
-                        </CardContent>
-                    </Card>
-                ))}
+                <div className='flex space-y-2 flex-col'>
+                    {sortTrips(trips).map((trip) => (
+                        <Card key={trip.origin + trip.destination} >
+                            <CardHeader className='p-5 pb-1'>
+                                <CardDescription>
+                                    {trip.origin} → {trip.destination}
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className='flex p-4 space-x-10 justify-between'>
+                                <p>Date: {trip.date}</p>
+                                <p>points: {trip.points}</p>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </div>
             </div>
 
             <div style={{ display: 'flex', justifyContent: 'center' }}>
