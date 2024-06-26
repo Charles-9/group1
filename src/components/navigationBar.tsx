@@ -3,23 +3,38 @@ import { CgProfile } from 'react-icons/cg'
 import { MdOutlineLeaderboard } from 'react-icons/md'
 import { IoTicketSharp } from 'react-icons/io5'
 import { useNavigate } from 'react-router-dom'
+import { NavigationTab } from './NavigationTabs'
 
-const NavigationBar = () => {
+interface Props {
+    navigationTab: NavigationTab
+}
+
+const NavigationBar = (props: Props) => {
     const navigate = useNavigate()
+
+    const handleNavigate = (path: string) => {
+        navigate(path)
+    }
+
     return (
         <div className="bg-card">
-            <Tabs defaultValue="account">
-                <TabsList className="fixed bottom-0 center">
+            <Tabs
+                value={props.navigationTab}
+                className="fixed bottom-0 center w-[390px] "
+            >
+                <TabsList className="h-[70px] rounded-none bg-card flex flex-row justify-around align-center">
                     <TabsTrigger
-                        value="profile"
-                        onClick={() => navigate('/profile')}
+                        value={NavigationTab.Profile}
+                        onClick={() => handleNavigate('/profile')}
+                        className={`flex flex-col align-center w-[100px] data-[state=active]:bg-gray-200`}
                     >
                         <CgProfile size={25} className="text-secondary" />
                         Profile
                     </TabsTrigger>
                     <TabsTrigger
-                        value="leaderboard"
-                        onClick={() => navigate('/leaderboard')}
+                        value={NavigationTab.LeaderBoard}
+                        onClick={() => handleNavigate('/leaderboard')}
+                        className={`flex flex-col align-center w-[100px] data-[state=active]:bg-gray-200`}
                     >
                         <MdOutlineLeaderboard
                             size={25}
@@ -28,9 +43,9 @@ const NavigationBar = () => {
                         Leaderboard
                     </TabsTrigger>
                     <TabsTrigger
-                        value="freetrips"
-                        onClick={() => navigate('/rewards')}
-                        
+                        value={NavigationTab.FreeTrips}
+                        onClick={() => handleNavigate('/rewards')}
+                        className={`flex flex-col align-center w-[100px] data-[state=active]:bg-gray-200`}
                     >
                         <IoTicketSharp size={25} className="text-accent" />
                         Free Trips

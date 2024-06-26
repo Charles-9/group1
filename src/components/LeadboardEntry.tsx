@@ -2,9 +2,7 @@ import {
     Card,
     CardContent,
     CardDescription,
-    CardFooter,
     CardHeader,
-    CardTitle,
 } from "../components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar"
 
@@ -24,19 +22,19 @@ const LeaderBoardTable: React.FC<LeadboardEntryTable> = ({ entries }) => {
     return (
         <div>
             {entries.map((entry) => (
-                <Card key={entry.name} style={{ marginBottom: '10px', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '90%'}}>
+                <Card key={entry.name} style={{ marginBottom: '10px', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
                     <CardHeader>
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <Avatar>
                                 <AvatarImage src={entry.avatarUrl} alt={entry.name} />
                                 <AvatarFallback>CN</AvatarFallback>
                             </Avatar>
-                            <CardDescription>
+                            <CardDescription className="ml-4">
                                 {entry.name}
                             </CardDescription>
                         </div>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="p-0 pr-6">
                         <p>Points: {entry.points}</p>
                     </CardContent>
                 </Card>
