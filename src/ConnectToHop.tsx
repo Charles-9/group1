@@ -4,6 +4,23 @@ import { Input } from "./components/ui/input"
 import { Button } from "./components/ui/button"
 import { useNavigate } from 'react-router-dom';
 
+const spinnerStyle: React.CSSProperties = {
+    width: '50px', // Adjust size as needed
+    height: '50px',
+    border: '8px solid #f3f3f3', // Light grey
+    borderTop: '8px solid #3498db', // Blue
+    borderRadius: '50%',
+    animation: 'spin 1s linear infinite',
+    margin: '20px auto', // Center the spinner
+};
+
+const keyframesStyle: React.CSSProperties = {
+    '@keyframes spin': {
+        from: { transform: 'rotate(0deg)' },
+        to: { transform: 'rotate(360deg)' },
+    },
+};
+
 const Leaderboard: React.FC = () => {
     const [isConnected, setIsConnected] = useState(false);
 
@@ -12,19 +29,20 @@ const Leaderboard: React.FC = () => {
     }
 
     const navigate = useNavigate();
-    const [delay, setDelay] = useState<boolean>(false);
+    const [loading, setLoading] = useState<boolean>(false);
 
     useEffect(() => {
-        if (delay) {
+        if (loading) {
             const timer = setTimeout(() => {
                 handleConnect();
+                setLoading(false);
             }, 1000); // Choose length of delay here        
             return () => clearTimeout(timer);
         }
-    }, [delay, navigate]);
+    }, [loading, navigate]);
 
     const handleClick = () => {
-        setDelay(true);
+        setLoading(true);
     };
 
     return (
@@ -66,9 +84,21 @@ const Leaderboard: React.FC = () => {
                         {/* <Link to="/" style={{ display: 'flex', justifyContent: 'center', paddingTop: '20px' }}>
                             <Button>Connect to hop</Button>
                         </Link> */}
+                        <style>
+                        {`
+                            @keyframes spin {
+                                from { transform: rotate(0deg); }
+                                to { transform: rotate(360deg); }
+                            }
+                        `}
+                        </style>
+                        {loading ? (
+                            <div style={spinnerStyle}></div>
+                        ) : (
                         <Button className='w-full' onClick={handleClick}>
                             {isConnected ? 'Connected to Hop' : 'Connect to Hop'}
                         </Button>
+                        )}
                     </div>
                 </div>
             </div>
