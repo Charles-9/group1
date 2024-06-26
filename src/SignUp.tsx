@@ -7,7 +7,7 @@ const SignUp: React.FC = () => {
     return (
         <>
             <br />
-            <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl" style={{paddingTop: '30px', paddingBottom: '10px', paddingLeft: '40px'}}>
+            <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl" style={{paddingTop: '30px', paddingBottom: '15px', paddingLeft: '40px'}}>
                 Sign up
             </h1>
             <br />

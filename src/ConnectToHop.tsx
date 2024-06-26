@@ -16,16 +16,19 @@ const Leaderboard: React.FC = () => {
                 to track your trips
             </h2>
             <br />
-            <img src={"https://i0.wp.com/www.greaterauckland.org.nz/wp-content/uploads/2015/09/AT-Logo.png?fit=512%2C512&ssl=1"} alt = "Logo" style={{width: '170px', alignSelf: 'flex-end', paddingRight: '40px'}}/>
+            <img src={"https://i0.wp.com/www.greaterauckland.org.nz/wp-content/uploads/2015/09/AT-Logo.png?fit=512%2C512&ssl=1"} alt = "Logo" style={{width: '170px', alignSelf: 'flex-end', paddingRight: '40px', paddingTop: '7px'}}/>
             </div>
 
-            <div style={{ paddingLeft: '20px', paddingRight: '20px', paddingTop: '50px'}}>
-                <Input placeholder='AT Hop number'></Input><br />
-                <Input placeholder='email address'></Input>
-                <br />
-                <Link to="/profile" style={{ display: 'flex', justifyContent: 'center' }}>
-                    <Button>Connect to hop</Button>
-                </Link>
+            <div className='screenDiv flex flex-col items-center rounded-tl-[30px] rounded-tr-[30px]'>
+                <div style={{ paddingLeft: '20px', paddingRight: '20px', paddingTop: '50px'}}>
+                    <Input placeholder='AT Hop number'></Input><br />
+                    <Input placeholder='Email address'></Input><br />
+                    <Input placeholder='Password'></Input>
+                    <br />
+                    <Link to="/profile" style={{ display: 'flex', justifyContent: 'center', paddingTop: '20px'}}>
+                        <Button>Connect to hop</Button>
+                    </Link>
+                </div>
             </div>
         </>
     );
