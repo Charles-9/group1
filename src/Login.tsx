@@ -64,7 +64,6 @@ const Login: React.FC = () => {
                     ) : (
                         <Button onClick={handleClick} style={{ display: 'flex', justifyContent: 'center' }}>Log in</Button>
                     )}
-                    <Link to="/"><h2>Back to home screen</h2></Link>
                 </div>
             </div>
         </>
