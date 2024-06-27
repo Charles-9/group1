@@ -32,7 +32,12 @@ const LeaderBoardTable: React.FC<LeadboardEntryTable> = ({ entries }) => {
     return (
         <div>
             {entries.map((entry, index) => (
-                <Card key={entry.name} style={{ marginBottom: '10px', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
+                // <Card key={entry.name} style={{ marginBottom: '10px', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
+                <Card
+                key={entry.name}
+                style={{ marginBottom: '10px', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}
+                className={entry.name === "Elly Maria (You)" ? 'highlight-card' : ''}
+            >
                     <CardHeader>
                         <div style={{ display: 'flex', alignItems: 'center', flex: 1, position: 'relative' }}>
                         {index < 3 && (

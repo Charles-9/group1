@@ -96,3 +96,8 @@
         margin: 0 auto;
     }
 }
+
+.highlight-card {
+    outline: 4px solid #FFB03B; /* Adjust the color and thickness as needed */
+    outline-offset: 0px; /* Optional: to add some spacing between the outline and the card */
+}

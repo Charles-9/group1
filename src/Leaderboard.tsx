@@ -7,7 +7,7 @@ import { NavigationTab } from './components/NavigationTabs';
 
 const allTimeEntries = [
     { name: 'Tim Wong', points: 500, avatarUrl: 'public/Assets/50.png' },
-    { name: 'Renee Singh', points: 625, avatarUrl: 'public/Assets/93.png' },
+    { name: 'Elly Maria (You)', points: 676, avatarUrl: 'public/Assets/93.png' },
     { name: 'Paul Simon', points: 480, avatarUrl: 'public/Assets/50.png' },
     { name: 'Alexa Nicholson', points: 765, avatarUrl: 'public/Assets/58.png' },
 ];
